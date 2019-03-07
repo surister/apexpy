@@ -1,8 +1,6 @@
 import aiohttp
 from apexpy.utils import Constants
 from apexpy.exceptions import ApiKeyNotProvidedError
-import asyncio
-
 
 class ApexRequest:
     def __init__(self, name: str, platform: int, api_key: str = None):
@@ -24,7 +22,7 @@ class ApexRequest:
         if resp != Constants.API_OK:
             raise Constants.API_ERROR_MAP.get(resp)
 
-    async def _session(self):
+    async def session(self):
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(self.req_url) as resp:
                 await self._error_handler(resp.status)
@@ -32,4 +30,4 @@ class ApexRequest:
                 return resp
 
     async def raw_data(self):
-        return await self._session()
+        return await self.session()
