@@ -1,13 +1,14 @@
 import aiohttp
 from apexpy import Constants
-from apexpy import ApiKeyNotProvidedError
+from apexpy.exceptions import ApiKeyNotProvidedError
 import asyncio
 
 
-class APexRequest:
+class HttpRequest:
     def __init__(self, name: str, api_key: str = None, platform: int = 5):
+
         if api_key is None and Constants.API_KEY is None:
-            raise ApiKeyNotProvidedError('')
+            raise ApiKeyNotProvidedError
 
         self.platform = platform
         self.name = name
@@ -15,18 +16,21 @@ class APexRequest:
         self.api_key = api_key if api_key else Constants.API_KEY
         self.headers = {'TRN-Api-KEY': self.api_key}
 
-        self.req_url = f'{Constants.BASE_URL}/{self.platform}/{self.name}'
+        self.req_url = f'{Constants.BASE_URL}{self.platform}/{self.name}'
 
-    async def session(self):
-        pass
+    @staticmethod
+    async def _error_handler(resp):
+        if resp != Constants.API_OK:
+            raise Constants.API_ERROR_MAP.get(resp)
 
-    async def _handle_session(self):
+    async def _session(self):
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(self.req_url) as resp:
-                print(resp)
+                await self._error_handler(resp.status)
                 return resp
 
-a = APexRequest(name='Zodiac')
 
-asyncio.run(a.session())
+a = HttpRequest(name='Zodiac', platform=1)
+
+asyncio.run(a._session())
 
