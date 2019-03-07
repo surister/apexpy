@@ -1,11 +1,11 @@
 import aiohttp
-from apexpy import Constants
+from apexpy.utils import Constants
 from apexpy.exceptions import ApiKeyNotProvidedError
 import asyncio
 
 
-class HttpRequest:
-    def __init__(self, name: str, api_key: str = None, platform: int = 5):
+class ApexRequest:
+    def __init__(self, name: str, platform: int, api_key: str = None):
 
         if api_key is None and Constants.API_KEY is None:
             raise ApiKeyNotProvidedError
@@ -17,6 +17,7 @@ class HttpRequest:
         self.headers = {'TRN-Api-KEY': self.api_key}
 
         self.req_url = f'{Constants.BASE_URL}{self.platform}/{self.name}'
+        self._raw_json = None
 
     @staticmethod
     async def _error_handler(resp):
@@ -27,10 +28,8 @@ class HttpRequest:
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(self.req_url) as resp:
                 await self._error_handler(resp.status)
+                self._raw_json = await resp.json()
                 return resp
 
-
-a = HttpRequest(name='Zodiac', platform=1)
-
-asyncio.run(a._session())
-
+    async def raw_data(self):
+        return await self._session()

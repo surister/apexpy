@@ -1,4 +1,3 @@
-from apexpy.utils import Constants
+from apexpy.player import ApexPlayer
 
-
-__all__ = ['Constants']
+__all__ = ['ApexPlayer']

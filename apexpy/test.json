@@ -1,0 +1,72 @@
+{
+  "data": {
+    "id": "730b85cd-0c5c-45e8-801a-10a5e4bcad6b",
+    "type": "player",
+    "children": [
+      {
+        "id": "legend_1",
+        "type": "",
+        "metadata": {
+          "legend_name": "Wraith",
+          "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
+          "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/wraith-concept-bg-small.jpg"
+        },
+        "stats": [
+          {
+            "metadata": {
+              "key": "Kills",
+              "name": "Kills",
+              "categoryKey": "combat",
+              "categoryName": "Combat",
+              "isReversed": false
+            },
+            "value": 7.0,
+            "percentile": 83.0,
+            "displayValue": "7",
+            "displayRank": ""
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "statsCategoryOrder": [
+        "combat",
+        "game",
+        "weapons"
+      ],
+      "platformId": 2,
+      "platformUserHandle": "Itspikolo",
+      "accountId": "730b85cd-0c5c-45e8-801a-10a5e4bcad6b",
+      "cacheExpireDate": "3/7/2019 4:43:54 PM",
+      "level": 9
+    },
+    "stats": [
+      {
+        "metadata": {
+          "key": "Level",
+          "name": "Level",
+          "categoryKey": "combat",
+          "categoryName": "Combat",
+          "isReversed": false
+        },
+        "value": 9.0,
+        "percentile": 88.0,
+        "displayValue": "9",
+        "displayRank": ""
+      },
+      {
+        "metadata": {
+          "key": "Kills",
+          "name": "Kills",
+          "categoryKey": "combat",
+          "categoryName": "Combat",
+          "isReversed": false
+        },
+        "value": 7.0,
+        "percentile": 81.0,
+        "displayValue": "7",
+        "displayRank": ""
+      }
+    ]
+  }
+}
