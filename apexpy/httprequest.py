@@ -2,6 +2,7 @@ import aiohttp
 from apexpy.utils import Constants
 from apexpy.exceptions import ApiKeyNotProvidedError
 
+
 class ApexRequest:
     def __init__(self, name: str, platform: int, api_key: str = None):
 

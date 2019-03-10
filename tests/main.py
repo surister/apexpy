@@ -1,8 +1,11 @@
 import asyncio
-from apexpy import ApexPlayer
+from apexpy import ApexApi
+
 
 async def main():
-    player = await ApexPlayer('DiegosaursTTV', 5).make()
+    player = ApexApi()
+    await player.search('DiegosaursTTV', 5)
+    print(player)
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
