@@ -1,3 +1,3 @@
-from apexpy.player import ApexPlayer
+from apexpy.api import ApexApi
 
-__all__ = ['ApexPlayer']
+__all__ = ['ApexApi']
