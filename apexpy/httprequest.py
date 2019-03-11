@@ -1,6 +1,7 @@
 import aiohttp
-from apexpy.utils import Constants
+
 from apexpy.exceptions import ApiKeyNotProvidedError
+from apexpy.utils import Constants
 
 
 class ApexRequest:
@@ -19,11 +20,11 @@ class ApexRequest:
         self._raw_json = None
 
     @staticmethod
-    async def _error_handler(resp):
+    async def _error_handler(resp: int) -> None:
         if resp != Constants.API_OK:
             raise Constants.API_ERROR_MAP.get(resp)
 
-    async def session(self):
+    async def session(self) -> aiohttp.client.ClientResponse:
         async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(self.req_url) as resp:
                 await self._error_handler(resp.status)

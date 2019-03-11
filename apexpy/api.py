@@ -7,7 +7,7 @@ class ApexApi:
         self.name = self.platform = None
         self.key = key
 
-    async def _populate(self, data):
+    async def _populate(self, data) -> None:
 
         # TODO 1
         for k, v in data['data']['metadata'].items():
@@ -16,7 +16,7 @@ class ApexApi:
         print(data['data'].keys())
         print(data['data']['id'])
 
-    async def search(self, name, platform):
+    async def search(self, name: str, platform: int) -> None:
         self.name = name
         self.platform = platform
 

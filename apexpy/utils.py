@@ -1,7 +1,7 @@
-from typing import NamedTuple
 from os import environ
+from typing import NamedTuple
 
-from apexpy.exceptions import UnauthorizedError, NotFoundError, PlayerNotFoundError, ServerError
+from apexpy.exceptions import NotFoundError, PlayerNotFoundError, ServerError, UnauthorizedError
 
 
 class Constants(NamedTuple):
@@ -29,4 +29,3 @@ class Constants(NamedTuple):
         404: PlayerNotFoundError,
         500: ServerError,
     }
-
