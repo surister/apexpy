@@ -5,9 +5,19 @@ verify_ssl = true
 
 [dev-packages]
 python-dotenv = "*"
+flake8 = "*"
+flake8-bugbear = "*"
+flake8-bandit = "*"
+flake8-import-order = "*"
+flake8-tidy-imports = "*"
 
 [packages]
 aiohttp = "*"
+dev = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+lint = "python -m flake8"
