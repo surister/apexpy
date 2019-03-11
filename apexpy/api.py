@@ -1,4 +1,5 @@
 from apexpy.httprequest import ApexRequest
+from apexpy.characters import ApexCharacter
 
 
 class ApexApi:
@@ -6,15 +7,21 @@ class ApexApi:
 
         self.name = self.platform = None
         self.key = key
+        self.legends = []  # Game's characters
 
     async def _populate(self, data) -> None:
 
-        # TODO 1
+        self.legends = [ApexCharacter(char_data) for char_data in data['data']['children']]
+
         for k, v in data['data']['metadata'].items():
             setattr(self, k, v)
 
-        print(data['data'].keys())
-        print(data['data']['id'])
+        stats = data['data']['stats']
+
+        self.stats = [
+            {stats['metadata']['key']: stats['value'], 'rank': stats.get('rank')} for stats in stats
+        ]
+        # TODO 1
 
     async def search(self, name: str, platform: int) -> None:
         self.name = name
