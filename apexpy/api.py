@@ -21,7 +21,6 @@ class ApexApi:
         self.stats = [
             {stats['metadata']['key']: stats['value'], 'rank': stats.get('rank')} for stats in stats
         ]
-        # TODO 1
 
     async def search(self, name: str, platform: int) -> None:
         self.name = name
