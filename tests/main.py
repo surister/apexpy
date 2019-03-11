@@ -4,9 +4,10 @@ from apexpy import ApexApi
 
 async def main():
     player = ApexApi()
-    await player.search('DiegosaursTTV', 5)
-    print(player)
+    await player.search('DiegosaursTTV', 'pc')
+    # for legend in player.legends:
+    #     print(legend.stats)
+    print(player.stats)
 
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    asyncio.run(main())

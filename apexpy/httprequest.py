@@ -30,6 +30,3 @@ class ApexRequest:
                 await self._error_handler(resp.status)
                 self._raw_json = await resp.json()
                 return resp
-
-    async def raw_data(self):
-        return await self.session()

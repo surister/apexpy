@@ -1,13 +1,14 @@
-from apexpy.httprequest import ApexRequest
 from apexpy.characters import ApexCharacter
+from apexpy.httprequest import ApexRequest
+from apexpy.utils import Constants
 
 
 class ApexApi:
-    def __init__(self, key=None):
+    def __init__(self, key: str = None):
 
         self.name = self.platform = None
         self.key = key
-        self.legends = []  # Game's characters
+        self.legends = []  # Game's characters are called 'legends' in this game.
 
     async def _populate(self, data) -> None:
 
@@ -22,9 +23,9 @@ class ApexApi:
             {stats['metadata']['key']: stats['value'], 'rank': stats.get('rank')} for stats in stats
         ]
 
-    async def search(self, name: str, platform: int) -> None:
+    async def search(self, name: str, platform: str) -> None:
         self.name = name
-        self.platform = platform
+        self.platform = Constants.PLATFORM_MAP.get(platform)
 
         data = await ApexRequest(self.name, self.platform, api_key=self.key).session()
         await self._populate(await data.json())

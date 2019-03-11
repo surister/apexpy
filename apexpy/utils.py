@@ -29,3 +29,9 @@ class Constants(NamedTuple):
         404: PlayerNotFoundError,
         500: ServerError,
     }
+
+    PLATFORM_MAP = {
+        'pc': 5,
+        'xbox': 1,
+        'psn': 2
+    }
