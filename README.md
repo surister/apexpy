@@ -1,11 +1,8 @@
-
 # Introduction
-
 
 Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
 
-Showcase
--------------
+## Showcase
 
 
     import asyncio
@@ -24,8 +21,7 @@ Showcase
 
     asyncio.run(main())
 
-Output
-------
+## Output
 
     Wraith -> [{'Kills': 4329.0, 'rank': 658}, {'KillsPerMatch': 8.78, 'rank': 117}, {'DamagePerMatch': 1696.19, 'rank': 128}, {'Damage': 836222.0, 'rank': 926}, {'MatchesPlayed': 493.0, 'rank': 866}]
     Mirage -> [{'Kills': 10324.0, 'rank': 1}, {'Damage': 2062356.0, 'rank': 1}, {'Headshots': 6869.0, 'rank': 4}, {'CarePackageKills': 89.0, 'rank': 2}]
