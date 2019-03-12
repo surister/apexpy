@@ -1,12 +1,8 @@
-============
-Introduction
-============
+
+# Introduction
+
 
 Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
-
-
-
-Apex py is written using aiohttp and wrapps all the data given by the api in to a convenient scheme for your use.
 
 Showcase
 -------------
@@ -40,4 +36,4 @@ Output
     Bangalore -> [{'Kills': 384.0, 'rank': 27236}, {'Damage': 78092.0, 'rank': 23243}]
     Pathfinder -> [{'Kills': 37.0, 'rank': 27638}, {'Specific2': 17665.0, 'rank': 12108}]
     [{'Level': 392.0, 'rank': None}, {'Kills': 15370.0, 'rank': 1}, {'KillsPerMatch': 31.18, 'rank': None}, {'DamagePerMatch': 6037.87, 'rank': None}, {'Damage': 2976670.0, 'rank': 1}, {'MatchesPlayed': 493.0, 'rank': None}, {'CarePackageKills': 89.0, 'rank': None}]
-
+  
