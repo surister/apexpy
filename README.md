@@ -2,6 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fcd973fcdfea4d529da32beaccd55420)](https://www.codacy.com/app/surister/apexpy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=surister/apexpy&amp;utm_campaign=Badge_Grade)
 ![PyPI - Status](https://img.shields.io/pypi/status/apexlegendspy.svg)
+
 Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
 
 ## Showcase
