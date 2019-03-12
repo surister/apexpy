@@ -4,7 +4,6 @@ Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
 
 ## Showcase
 
-
     import asyncio
     from apexpy import ApexApi
 
