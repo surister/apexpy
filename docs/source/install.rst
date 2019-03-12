@@ -17,7 +17,7 @@ Using pip::
 
 Using pipenv::
 
-    $ pipenv install wakapy
+    $ pipenv install apexpy
 
 Get an Api key
 --------------
