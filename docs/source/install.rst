@@ -13,11 +13,11 @@ Using bare git::
 
 Using pip::
 
-    $ pip install apexpy
+    $ pip install apexlegendspy
 
 Using pipenv::
 
-    $ pipenv install apexpy
+    $ pipenv install apexlegendspy
 
 Get an Api key
 --------------
