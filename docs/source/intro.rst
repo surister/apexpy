@@ -2,6 +2,10 @@
 Introduction
 ============
 
+.. image:: https://api.codacy.com/project/badge/Grade/fcd973fcdfea4d529da32beaccd55420
+    :target: https://www.codacy.com/app/surister/apexpy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=surister/apexpy&amp;utm_campaign=Badge_Grade
+
+
 Apexpy it's an asynchronous api wrapper for Apex-legend written in `python 3.6+ <https://www.python.org/>`_
 
 .. note:: This project or its documentation is in no way related to `EA <https://www.ea.com/games/apex-legends>`_
