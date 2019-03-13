@@ -20,6 +20,7 @@ ______________
 Apex request
 ____________
 .. autoclass:: apexpy.httprequest.ApexRequest
+    :members:
 
 Exceptions
 __________

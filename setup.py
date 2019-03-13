@@ -1,6 +1,6 @@
 import setuptools
 
-with open("README.rst", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 with open('requirements.txt', 'r') as f:
@@ -8,7 +8,7 @@ with open('requirements.txt', 'r') as f:
 
 setuptools.setup(
     name="apexlegendspy",
-    version="0.0.1",
+    version="0.0.2",
     author="surister",
     author_email="surister98@gmail.com",
     description="Apex-legends api async wrapper",

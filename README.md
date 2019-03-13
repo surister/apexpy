@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fcd973fcdfea4d529da32beaccd55420)](https://www.codacy.com/app/surister/apexpy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=surister/apexpy&amp;utm_campaign=Badge_Grade)
 ![LICENSE](https://img.shields.io/github/license/surister/apexpy.svg)
+![DOCS](https://readthedocs.org/projects/apexlegendspy/badge/?version=latest)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/apexlegendspy.svg)
 
 Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
 
@@ -35,3 +37,6 @@ Apexpy it's an asynchronous api wrapper for Apex-legend written for python 3.6+
     Pathfinder -> [{'Kills': 37.0, 'rank': 27638}, {'Specific2': 17665.0, 'rank': 12108}]
     [{'Level': 392.0, 'rank': None}, {'Kills': 15370.0, 'rank': 1}, {'KillsPerMatch': 31.18, 'rank': None}, {'DamagePerMatch': 6037.87, 'rank': None}, {'Damage': 2976670.0, 'rank': 1}, {'MatchesPlayed': 493.0, 'rank': None}, {'CarePackageKills': 89.0, 'rank': None}]
   
+## Documentation
+
+https://apexlegendspy.readthedocs.io/en/latest/
